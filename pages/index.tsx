@@ -8,9 +8,9 @@ import WaveSurfer from "wavesurfer.js";
 export default function Home() {
   const [volume, setVolume] = useState(1); // Initial volume set to 1 (maximum)
   const [isPlaying, setIsPlaying] = useState(false);
-  const [waveform, setWaveform] = useState(null); // Initial waveform set to null
+  const [waveform, setWaveform] = useState<WaveSurfer | null>(null); // Use type assertion here
   const [secondsPlayed, setSecondsPlayed] = useState(0); // Initial seconds played set to 0
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   const waveformRef = useRef(null);
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function Home() {
     wavesurfer.load("/video-mockup.mp4");
     // Event listener for audioprocess to update secondsPlayed
     wavesurfer.on("audioprocess", () => {
-      setSecondsPlayed(wavesurfer.getCurrentTime().toFixed(0));
+      setSecondsPlayed(Number(wavesurfer.getCurrentTime().toFixed(0)));
     });
 
     // Clean up the WaveSurfer instance when the component is unmounted
