@@ -4,6 +4,7 @@ import { AiOutlinePause } from "react-icons/ai";
 import { FiPlay } from "react-icons/fi";
 import WaveSurfer from "wavesurfer.js";
 
+// TODO: refactor this into separate components
 export default function Home() {
   const [volume, setVolume] = useState(1); // Initial volume set to 1 (maximum)
   const [isPlaying, setIsPlaying] = useState(false);
