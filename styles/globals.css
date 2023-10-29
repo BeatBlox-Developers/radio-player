@@ -13,6 +13,7 @@
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
+    /* --thumb-size: 200px; */
   }
 }
 
@@ -24,4 +25,31 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+/* CSS */
+/* Set the track (the bar) to gray */
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 1px;
+  background: white; /* Set the track color */
+  outline: none;
+}
+
+/* Set the thumb (the small ball) to white and adjust its size */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  width: 5px; /* Set the width of the thumb */
+  height: 5px; /* Set the height of the thumb */
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -5px; /* Adjust the vertical position of the thumb to center it on the track */
+}
+
+/* Set styles for the input element when it is focused */
+input[type="range"]:focus {
+  outline: none;
 }
