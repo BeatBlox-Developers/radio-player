@@ -17,6 +17,8 @@ export default function Home() {
       container: waveformRef.current!,
       waveColor: "white",
       progressColor: "white",
+      cursorColor: "gray",
+      cursorWidth: 2,
       url: "/video-mockup.mp4",
       barWidth: 3,
       height: 40,
