@@ -72,8 +72,8 @@ export default function Home() {
           <source src="/video-mockup.mp4" type="video/mp4" />
         </video>
       </div>
-      <div className="w-full flex  items-end justify-center mb-10 lg:mb-0 relative lg:fixed bottom-5 text-white">
-        <div className="w-fit py-6 lg:py-3 px-8 border border-white rounded-[2.2rem] flex flex-col lg:flex-row justify-center items-center lg:justify-between gap-10">
+      <div className="w-full flex  items-end justify-center  relative lg:fixed bottom-5 text-white">
+        <div className="w-fit py-6 lg:py-3 px-8 mb-10 lg:mb-0 border border-white rounded-[2.2rem] flex flex-col lg:flex-row justify-center items-center lg:justify-between gap-10">
           <button
             className="rounded-full bg-white text-black h-10 w-10 flex justify-center items-center"
             onClick={handlePlayPause}
