@@ -68,7 +68,7 @@ export default function Home() {
     <main className="h-screen lg:h-full w-screen bg-black">
       <NavBar secondsPlayed={secondsPlayed} />
       <div className="flex justify-center items-center h-fit lg:h-full">
-        <video ref={videoRef} className="h-96 w-96 mt-0" loop muted>
+        <video ref={videoRef} className="h-96 w-96 mt-0" loop muted playsInline>
           <source src="/video-mockup.mp4" type="video/mp4" />
         </video>
       </div>
