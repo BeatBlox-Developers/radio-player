@@ -65,15 +65,15 @@ export default function Home() {
   };
 
   return (
-    <main className="h-full w-screen bg-black">
+    <main className="h-screen lg:h-full w-screen bg-black">
       <NavBar secondsPlayed={secondsPlayed} />
-      <div className="flex justify-center items-center h-full">
+      <div className="flex justify-center items-center h-fit lg:h-full">
         <video ref={videoRef} className="h-96 w-96 mt-0" loop muted>
           <source src="/video-mockup.mp4" type="video/mp4" />
         </video>
       </div>
-      <div className="w-full flex  items-end justify-center  fixed bottom-5  text-white">
-        <div className="w-fit py-3 px-8 border border-white rounded-[2.2rem] flex flex-row justify-between gap-10">
+      <div className="w-full flex  items-end justify-center mb-10 lg:mb-0 relative lg:fixed bottom-5 text-white">
+        <div className="w-fit py-6 lg:py-3 px-8 border border-white rounded-[2.2rem] flex flex-col lg:flex-row justify-center items-center lg:justify-between gap-10">
           <button
             className="rounded-full bg-white text-black h-10 w-10 flex justify-center items-center"
             onClick={handlePlayPause}
@@ -90,7 +90,7 @@ export default function Home() {
             <span className="text-xs">Artist name</span>
           </div>
           <div className="w-64 h-full " ref={waveformRef}></div>
-          <div className="flex flex-col justify-center items-center">
+          <div className="flex flex-col justify-center items-center mb-6 lg:mb-0 z-10">
             <input
               type="range"
               min="0"
@@ -98,7 +98,7 @@ export default function Home() {
               step="0.01"
               value={volume}
               onChange={handleVolumeChange}
-              className="w-16 h-2 rounded-full bg-white "
+              className="w-16 h-2 rounded-full bg-white"
             />
           </div>
         </div>
